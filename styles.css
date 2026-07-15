@@ -416,13 +416,15 @@ h2 {
 .sample-card img {
   aspect-ratio: 4 / 3;
   object-position: center top;
+  position: relative;
+  z-index: 1;
 }
 
-#sample-coverage .sample-card img[src*="Mystics%20media%20day.jpg"],
-#sample-coverage .sample-card img[src*="wizards%20summer%20league%202.jpg"] {
-  transform: scale(1.12);
-  transform-origin: center 20%;
-  object-position: center 20%;
+#sample-coverage .sample-card img[src*="wizards%20summer%20league%202.jpg"],
+#sample-coverage .sample-card img[src*="Mystics%20media%20day.jpg"] {
+  transform: scale(1.2);
+  transform-origin: center 18%;
+  object-position: center 18%;
 }
 
 .caption,
@@ -432,11 +434,17 @@ h2 {
   flex-direction: column;
   gap: 0.3rem;
   background: var(--surface);
+  position: relative;
+  z-index: 2;
 }
 
 .caption h3,
 .hero-caption h3 {
   font-size: 1rem;
+  color: var(--text);
+  font-weight: 700;
+  display: block;
+  line-height: 1.15;
 }
 
 .caption p,
@@ -462,6 +470,10 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+}
+
+.tier-card .button {
+  margin-top: auto;
 }
 
 .contact-section {
